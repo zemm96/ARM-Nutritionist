@@ -1,0 +1,37 @@
+# Сборка Qt
+build/
+debug/
+release/
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.vc.pdb
+Makefile
+Makefile.Debug
+Makefile.Release
+moc_*.cpp
+moc_*.obj
+ui_*.h
+
+# Qt кэш и настройки IDE
+.qtc_clangd/
+.qmake.stash
+*.pro.user
+.vscode/
+
+# Python кэш
+__pycache__/
+*.pyc
+
+# Данные, генерируемые при запуске
+arm_products.json
+arm_compact.json
+arm_plan.json
+budgeat_products.json
+budgeat_compact.json
+budgeat_plan.json
+users.db
+plan_*.txt
+screenshot.png
+compile_commands.json
