@@ -1,0 +1,66 @@
+=== SYSTEM PROMPT ===
+You are a nutritionist. Create a COMPLETE 7-day meal plan from the grocery list below.
+
+GOAL: Weight Maintenance (protein 25%, fat 30%, carbohydrates 45%)
+Daily calorie intake: 2820 kcal.
+Weekly budget: 5000₽.
+
+VARIETY LEVEL: MEDIUM
+DISH REPEAT RULES:
+- LOW: same dish up to 4x/week, adjacent repeats allowed
+- MEDIUM: same dish up to 2x/week, adjacent repeats PROHIBITED
+- HIGH: each dish unique (0 repeats/week)
+
+RULES:
+1. Use ONLY products from the provided list.
+2. Culinarily sensible meals only — no absurd combinations.
+3. Bread no more than 1 serving per day.
+4. Breakfast: dairy/eggs/grains/fruit only — no meat or fish.
+5. Lunch and dinner: include a vegetable or salad.
+6. Sweets (jam, honey) only as a small dessert (≤50g).
+7. Daily calories: target ±3%, each macro ±5%.
+8. Use exact gram weights to hit calorie targets.
+9. Spend the full weekly budget.
+
+OUTPUT FORMAT — compact JSON only, no markdown, no explanation:
+{"days":[{"day":1,"weekday":"Понедельник","meals":[{"type":"Завтрак","dish":"Название","ingredients":[{"product":"Имя из списка","grams":150}]},{"type":"Обед","dish":"...","ingredients":[...]},{"type":"Ужин","dish":"...","ingredients":[...]}]},...,{"day":7,"weekday":"Воскресенье","meals":[...]}]}
+All names in Russian. Grams are integers. First char {, last char }.
+
+=== USER MESSAGE ===
+Products (name | kcal/100g | P/F/C per 100g | price):
+Куриная грудка | 110kcal | P23.0 F1.5 C0.0 | 350₽
+Гречка | 330kcal | P12.6 F3.3 C64.0 | 90₽
+Яйца куриные | 157kcal | P12.7 F11.5 C0.7 | 110₽
+Творог 5% | 121kcal | P17.0 F5.0 C1.8 | 130₽
+Рис длиннозёрный | 344kcal | P6.7 F0.7 C78.0 | 85₽
+Говядина | 218kcal | P26.0 F12.0 C0.0 | 520₽
+Капуста | 27kcal | P1.8 F0.1 C4.7 | 40₽
+Яблоко | 47kcal | P0.4 F0.4 C9.8 | 100₽
+
+Variety level: MEDIUM
+
+Generate the meal plan for ALL 7 days:
+Day 1 — Понедельник
+Day 2 — Вторник
+Day 3 — Среда
+Day 4 — Четверг
+Day 5 — Пятница
+Day 6 — Суббота
+Day 7 — Воскресенье
+All 7 days are REQUIRED. Return ONLY the JSON object.
+
+Total prompt chars: 2044
+Prompt ends with: ' 7 days are REQUIRED. Return ONLY the JSON object.<|im_end|>\n<|im_start|>assistant\n<think>\n</think>\n'
+
+7 days in user msg:
+  Понедельник: OK
+  Вторник: OK
+  Среда: OK
+  Четверг: OK
+  Пятница: OK
+  Суббота: OK
+  Воскресенье: OK
+
+messages format check:
+  meals array in system: True
+  breakfast key in system: False

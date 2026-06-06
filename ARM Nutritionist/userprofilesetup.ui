@@ -1,0 +1,2277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserProfileSetup</class>
+ <widget class="QMainWindow" name="UserProfileSetup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>903</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ARM Nutritionist</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+QPushButton:hover {
+    background-color: #45a049;
+}
+QPushButton:pressed {
+    background-color: #3e8e41;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+    background-color: #F5F7F3;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">QStackedWidget {
+    background-color: #F5F7F3;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QWidget" name="gridLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>340</y>
+          <width>181</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="userTextBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #2D6A30;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 110px;
+    min-height: 38px;
+}
+QPushButton:hover {
+    background-color: #245727;
+}
+QPushButton:pressed {
+    background-color: #1A4020;
+}
+QPushButton:disabled {
+    background-color: #B8CFB8;
+    color: #FFFFFF;
+}</string>
+           </property>
+           <property name="text">
+            <string>Войти</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <widget class="QPushButton" name="makeAccB">
+           <property name="font">
+            <font>
+             <family>Segoe UI</family>
+             <pointsize>-1</pointsize>
+             <underline>true</underline>
+             <strikeout>false</strikeout>
+             <fontweight>DemiBold</fontweight>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: transparent;
+    color: #2D6A30;
+    border: none;
+    padding: 4px 4px;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 0;
+    min-height: 0;
+    text-decoration: underline;
+}</string>
+           </property>
+           <property name="text">
+            <string>Создать профиль</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>140</y>
+          <width>521</width>
+          <height>182</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0" colspan="2">
+          <widget class="QLabel" name="appName">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #76B47A;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: transparent;
+    qproperty-alignment: AlignHCenter;
+}</string>
+           </property>
+           <property name="text">
+            <string>АРМ Нутрициолога</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLabel" name="welcome">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: transparent;
+    qproperty-alignment: AlignHCenter;
+}</string>
+           </property>
+           <property name="text">
+            <string>Добро пожаловать!</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <layout class="QFormLayout" name="formLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="loginlabel">
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+             </property>
+             <property name="text">
+              <string>Логин</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="loginLineEdit">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    min-height: 20px;
+    selection-background-color: #76B47A;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}
+
+QLineEdit:disabled {
+    background-color: #EEF2EE;
+    color: #A0B0A0;
+    border-color: #E4EBE2;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Orientation::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>30</width>
+               <height>5</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="passwordlabel">
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+             </property>
+             <property name="text">
+              <string>Пароль</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="passwordLineEdit">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    min-height: 20px;
+    selection-background-color: #76B47A;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}
+
+QLineEdit:disabled {
+    background-color: #EEF2EE;
+    color: #A0B0A0;
+    border-color: #E4EBE2;
+}</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <widget class="QPushButton" name="nextBtn1">
+        <property name="geometry">
+         <rect>
+          <x>700</x>
+          <y>440</y>
+          <width>166</width>
+          <height>58</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #2D6A30;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 110px;
+    min-height: 38px;
+}
+
+QPushButton:hover { background-color: #245727; }
+QPushButton:pressed { background-color: #1A4020; }</string>
+        </property>
+        <property name="text">
+         <string>Далее</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>180</y>
+          <width>301</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_5">
+         <item row="0" column="1">
+          <layout class="QFormLayout" name="formLayout_4">
+           <item row="0" column="0">
+            <layout class="QFormLayout" name="formLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="age">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ваш возраст</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSpinBox" name="ageBox">
+               <property name="maximumSize">
+                <size>
+                 <width>178</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QSpinBox {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    min-height: 20px;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+QSpinBox:focus {
+    border: 1.5px solid #2D6A30;
+}
+
+/* Кнопки − и + */
+QSpinBox::up-button,
+QSpinBox::down-button {
+    width: 24px;
+    border: none;
+    background-color: transparent;
+    border-radius: 4px;
+    subcontrol-origin: border;
+}
+
+QSpinBox::up-button {
+    subcontrol-position: right;
+    right: 1px;
+}
+
+QSpinBox::down-button {
+    subcontrol-position: left;
+    left: 1px;
+}
+
+QSpinBox::up-button:hover,
+QSpinBox::down-button:hover {
+    background-color: #EDF4EB;
+}
+
+/* Стрелки — переопределяем системные иконки */
+QSpinBox::up-arrow {
+    image: none;
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid #5A6B5A;
+}
+QSpinBox::down-arrow {
+    image: none;
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #5A6B5A;
+}
+</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="height">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ваш рост (в см)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QTextEdit" name="heightEdit">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>1</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>170</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+}
+
+QTextEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="weight">
+               <property name="styleSheet">
+                <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+               </property>
+               <property name="text">
+                <string>Ваш вес (в кг)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QTextEdit" name="weightEdit">
+               <property name="maximumSize">
+                <size>
+                 <width>170</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QTextEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+}
+
+QTextEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>80</y>
+          <width>261</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>270</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 10px;
+    margin-top: 16px;
+    padding: 12px 16px 12px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #5A6B5A;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 12px;
+    top: 2px;
+    padding: 0 6px;
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+}</string>
+        </property>
+        <property name="title">
+         <string>Ваш пол</string>
+        </property>
+        <widget class="QRadioButton" name="malerb">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>114</width>
+           <height>42</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+         </property>
+         <property name="text">
+          <string>Мужской</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="femalerb">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>30</y>
+           <width>119</width>
+           <height>42</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+         </property>
+         <property name="text">
+          <string>Женский</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <widget class="QWidget" name="gridLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>480</y>
+          <width>851</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="backBtn1">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>62</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>166</width>
+             <height>58</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: transparent;
+    color: #2D6A30;
+    border: 1.5px solid #2D6A30;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 110px;
+    min-height: 38px;
+}
+
+QPushButton:hover {
+    background-color: #EDF4EB;
+}
+
+QPushButton:pressed {
+    background-color: #D5EACF;
+}</string>
+           </property>
+           <property name="text">
+            <string>Назад</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QPushButton" name="nextBtn2">
+           <property name="maximumSize">
+            <size>
+             <width>166</width>
+             <height>58</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #2D6A30;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 110px;
+    min-height: 38px;
+}
+
+QPushButton:hover { background-color: #245727; }
+QPushButton:pressed { background-color: #1A4020; }</string>
+           </property>
+           <property name="text">
+            <string>Вперед</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>110</y>
+          <width>566</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_7">
+         <item row="0" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-bottom: 8px;
+}</string>
+             </property>
+             <property name="text">
+              <string>Уровень вашей физической активности</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="SedentaryJob">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Сидячая работа, нет физических нагрузок,
+передвижение только на транспорте</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="EasyWorkout">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Сидячая работа + легкие прогулки 3–4 раза в неделю 
+или легкие тренировки 1–2 раза в неделю</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="AverageWorkout">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Тренировки средней интенсивности 3–5 раз в неделю по 45–60 минут</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="IntenseWorkout">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Интенсивные тренировки 6–7 раз в неделю или физически активная работа</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="PowerfulWorkout">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Ежедневные интенсивные тренировки по 2+ часа или тяжелая физическая работа</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_7">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>110</y>
+          <width>184</width>
+          <height>351</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_8">
+         <item row="0" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>50000</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-bottom: 8px;
+}</string>
+             </property>
+             <property name="text">
+              <string>Ваша цель</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="WeightLoss">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Похудение</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="Maintenance">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Поддержание веса</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="WeightGain">
+             <property name="styleSheet">
+              <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+             </property>
+             <property name="text">
+              <string>Набор массы</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_4">
+       <layout class="QVBoxLayout" name="vLayoutPage4">
+        <property name="spacing">
+         <number>16</number>
+        </property>
+        <property name="leftMargin">
+         <number>40</number>
+        </property>
+        <property name="topMargin">
+         <number>16</number>
+        </property>
+        <property name="rightMargin">
+         <number>40</number>
+        </property>
+        <property name="bottomMargin">
+         <number>30</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="hLayoutNavPage4">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="hLayoutFoodCols">
+          <property name="spacing">
+           <number>24</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="leftFoodCol">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetMinimumSize</enum>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblFavoriteTitle">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #2D6A30;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+}</string>
+              </property>
+              <property name="text">
+               <string>Любимые продукты</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frameFavorite">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame#frameFavorite {
+    background-color: #FFFFFF;
+    border: 1.5px solid #2D6A30;
+    border-radius: 10px;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Shape::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="favLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frameFavHeader">
+                 <property name="styleSheet">
+                  <string notr="true">QFrame#frameFavHeader {
+    background-color: #EDF4EB;
+    border: none;
+    border-bottom: 1.5px solid #2D6A30;
+    border-radius: 0px;
+    padding: 4px 14px;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::NoFrame</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="favHdrLayout">
+                  <property name="leftMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>4</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>4</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="lblFavHead">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel {
+    color: #2D6A30;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: transparent;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Любимое</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="Loved">
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: #5A6B5A;
+    padding: 10px 14px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Например: стейк, форель, яблоко</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="rightFoodCol">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lblDislikedTitle">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    color: #A04040;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+}</string>
+              </property>
+              <property name="text">
+               <string>Нелюбимые продукты</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frameDisliked">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>100</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QFrame#frameDisliked {
+    background-color: #FFFFFF;
+    border: 1.5px solid #C07070;
+    border-radius: 10px;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Shape::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Shadow::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="dislLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frameDislHead">
+                 <property name="styleSheet">
+                  <string notr="true">QFrame#frameDislHead {
+    background-color: #FDF0F0;
+    border: none;
+    border-bottom: 1.5px solid #C07070;
+    border-radius: 0px;
+    padding: 4px 14px;
+}</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::Shape::NoFrame</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="dislHdrLayout">
+                  <property name="leftMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>4</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>14</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>4</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="lblDislHead">
+                    <property name="styleSheet">
+                     <string notr="true">QLabel {
+    color: #A04040;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: transparent;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Нелюбимое</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="Unloved">
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: #5A6B5A;
+    padding: 10px 14px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Например: рыба, молоко, свинина</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="hLayoutFoodBtns">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="backBtn2">
+            <property name="styleSheet">
+             <string notr="true">QPushButton#backBtn2 {
+    background-color: transparent;
+    color: #2D6A30;
+    border: 1.5px solid #2D6A30;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 110px;
+    min-height: 38px;
+}
+QPushButton#backBtn2:hover {
+    background-color: #EDF4EB;
+}</string>
+            </property>
+            <property name="text">
+             <string>Назад</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="spacerFoodBtns">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="nextBtn3">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: #2D6A30;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 110px;
+    min-height: 38px;
+}
+QPushButton:hover {
+    background-color: #245727;
+}
+QPushButton:pressed {
+    background-color: #1A4020;
+}
+QPushButton:disabled {
+    background-color: #B8CFB8;
+    color: #FFFFFF;
+}</string>
+            </property>
+            <property name="text">
+             <string>Далее</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_5">
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>120</y>
+          <width>171</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: transparent;
+    qproperty-alignment: AlignHCenter;
+}</string>
+        </property>
+        <property name="text">
+         <string>Регистрация</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="registerAcc">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>370</y>
+          <width>181</width>
+          <height>58</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #2D6A30;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 110px;
+    min-height: 38px;
+}
+QPushButton:hover {
+    background-color: #245727;
+}
+QPushButton:pressed {
+    background-color: #1A4020;
+}
+QPushButton:disabled {
+    background-color: #B8CFB8;
+    color: #FFFFFF;
+}</string>
+        </property>
+        <property name="text">
+         <string>Создать профиль</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="formLayoutWidget_4">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>170</y>
+          <width>451</width>
+          <height>182</height>
+         </rect>
+        </property>
+        <layout class="QFormLayout" name="formLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>Логин</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="login">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    min-height: 20px;
+    selection-background-color: #76B47A;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}
+
+QLineEdit:disabled {
+    background-color: #EEF2EE;
+    color: #A0B0A0;
+    border-color: #E4EBE2;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>Пароль</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="passwordRepeat">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    min-height: 20px;
+    selection-background-color: #76B47A;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}
+
+QLineEdit:disabled {
+    background-color: #EEF2EE;
+    color: #A0B0A0;
+    border-color: #E4EBE2;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>Повторите пароль</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="password">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    min-height: 20px;
+    selection-background-color: #76B47A;
+    selection-color: #FFFFFF;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2D6A30;
+    background-color: #FAFCF9;
+}
+
+QLineEdit:disabled {
+    background-color: #EEF2EE;
+    color: #A0B0A0;
+    border-color: #E4EBE2;
+}</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="backBtn3">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>420</y>
+          <width>181</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: transparent;
+    color: #2D6A30;
+    border: none;
+    padding: 4px 4px;
+    font-size: 13px;
+    font-weight: 600;
+    min-width: 0;
+    min-height: 0;
+    text-decoration: underline;
+}</string>
+        </property>
+        <property name="text">
+         <string>Уже есть аккаунт</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>80</y>
+          <width>221</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>-1</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: transparent;
+    qproperty-alignment: AlignHCenter;
+    margin-bottom: 4px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Центральный экран</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="mealPlanBtn">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>460</y>
+          <width>320</width>
+          <height>68</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background-color: #2D6A30;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 40px;
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 240px;
+    min-height: 44px;
+}
+
+QPushButton:hover { background-color: #245727; }
+QPushButton:pressed { background-color: #1A4020; }</string>
+        </property>
+        <property name="text">
+         <string>Сгенерировать план питания</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>190</y>
+          <width>361</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 10px;
+    padding: 16px;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>-10</y>
+           <width>101</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+border: transparent;
+    margin-bottom: 7px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Бюджет:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="BudgetlineEdit">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>208</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    color: #1A1A1A;
+    max-width: 180px;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2D6A30;
+}</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>60</y>
+           <width>161</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: transparent;
+border:  transparent;
+    margin-bottom: 7px;
+}</string>
+         </property>
+         <property name="text">
+          <string>Разнообразие:</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="gridLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>339</width>
+           <height>44</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="1" column="2">
+           <widget class="QRadioButton" name="radioButton_8">
+            <property name="styleSheet">
+             <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+            </property>
+            <property name="text">
+             <string>Высокое</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QRadioButton" name="radioButton_7">
+            <property name="styleSheet">
+             <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+            </property>
+            <property name="text">
+             <string>Среднее</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QRadioButton" name="lo">
+            <property name="styleSheet">
+             <string notr="true">QRadioButton {
+    background-color: #FFFFFF;
+    color: #5A6B5A;
+    font-family: &quot;Segoe UI&quot;, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    spacing: 8px;
+    padding: 9px 14px;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+}
+QRadioButton:checked {
+    background-color: #F2F9F2;
+    border-color: #2D6A30;
+    color: #2D6A30;
+    font-weight: 700;
+}
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #A8C0A8;
+    background-color: #FFFFFF;
+}
+QRadioButton::indicator:checked {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #2D6A30;
+    background-color: #2D6A30;
+}</string>
+            </property>
+            <property name="text">
+             <string>Низкое</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>190</y>
+          <width>321</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame {
+    background-color: #F0F7F0;
+    border: 1.5px solid #D0DECE;
+    border-radius: 8px;
+    padding: 14px;
+    min-height: 10px;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QLabel" name="cal_label2">
+         <property name="geometry">
+          <rect>
+           <x>-10</x>
+           <y>10</y>
+           <width>191</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI</family>
+           <pointsize>-1</pointsize>
+           <fontweight>ExtraBold</fontweight>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #2D6A30;
+    font-size: 60px;
+    font-weight: 800;
+    background-color: transparent;
+border:  transparent;
+    letter-spacing: -1px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>101</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 12px;
+    background-color: transparent;
+    margin-top: 2px;
+border: transparent;
+}</string>
+         </property>
+         <property name="text">
+          <string>ккал / день</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="PercentLabel2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>130</y>
+           <width>321</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    color: #5A6B5A;
+    font-size: 12px;
+    background-color: transparent;
+
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>150</y>
+          <width>921</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-bottom: 8px;
+border: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>Ваша норма калорий на день:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    color: #1A1A1A;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-bottom: 8px;
+border: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>Параметры плана:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_7">
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>220</y>
+          <width>75</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>903</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionmenu">
+   <property name="text">
+    <string>menu</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
